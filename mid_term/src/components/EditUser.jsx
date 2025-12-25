@@ -15,12 +15,12 @@ export default function EditUser({ users, setUsers }) {
   return (
     <div className="container mt-4">
       <h3>Edit User</h3>
-      <input className="form-control mb-2" value={edit.first}
-        onChange={(e) => setEdit({ ...edit, first: e.target.value })} />
-      <input className="form-control mb-2" value={edit.last}
-        onChange={(e) => setEdit({ ...edit, last: e.target.value })} />
-      <input className="form-control mb-2" value={edit.email}
-        onChange={(e) => setEdit({ ...edit, email: e.target.value })} />
+      <input className="form-control mb-2" value={edit.name}
+        onChange={(e) => setEdit({ ...edit, name: e.target.value })} />
+      <input className="form-control mb-2" value={edit.category}
+        onChange={(e) => setEdit({ ...edit, category: e.target.value })} />
+      <input className="form-control mb-2" value={edit.tel_num}
+        onChange={(e) => setEdit({ ...edit, tel_num: e.target.value })} />
       <button onClick={update} className="btn btn-primary">Update</button>
     </div>
   );

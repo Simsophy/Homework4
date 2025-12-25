@@ -7,9 +7,9 @@ export default function ViewUser({ users }) {
   return (
     <div className="container mt-4">
       <h3>User Details</h3>
-      <p><b>First Name:</b> {user.first}</p>
-      <p><b>Last Name:</b> {user.last}</p>
-      <p><b>Email:</b> {user.email}</p>
+      <p><b>Name:</b> {user.name}</p>
+      <p><b>Category:</b> {user.category}</p>
+      <p><b>Telephone Number:</b> {user.tel_num}</p>
     </div>
   );
 }

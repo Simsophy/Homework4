@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function AddUser({ users, setUsers }) {
-  const [user, setUser] = useState({ first: "", last: "", email: "" });
+  const [user, setUser] = useState({ name: "", category: "", tel_num: "" });
   const navigate = useNavigate();
 
   const submit = () => {
@@ -12,13 +12,13 @@ export default function AddUser({ users, setUsers }) {
 
   return (
     <div className="container mt-4">
-      <h3>Add User</h3>
-      <input className="form-control mb-2" placeholder="First Name"
-        onChange={(e) => setUser({ ...user, first: e.target.value })} />
-      <input className="form-control mb-2" placeholder="Last Name"
-        onChange={(e) => setUser({ ...user, last: e.target.value })} />
-      <input className="form-control mb-2" placeholder="Email"
-        onChange={(e) => setUser({ ...user, email: e.target.value })} />
+      <h3>Add Product</h3>
+      <input className="form-control mb-2" placeholder="Name"
+        onChange={(e) => setUser({ ...user, name: e.target.value })} />
+      <input className="form-control mb-2" placeholder="Category"
+        onChange={(e) => setUser({ ...user, category: e.target.value })} />
+      <input className="form-control mb-2" placeholder="Telephone Number"
+        onChange={(e) => setUser({ ...user, tel_num: e.target.value })} />
       <button onClick={submit} className="btn btn-primary">Save</button>
     </div>
   );

@@ -7,19 +7,19 @@ export default function UserList({ users, setUsers }) {
 
   return (
     <div className="container mt-4">
-      <table className="table table-bordered text-center">
+      <table className="table table-striped text-center">
         <thead>
           <tr>
-            <th>#</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Action</th>
+            <th>#</th><th>Name</th><th>Category</th><th>Telephone Number</th><th>Action</th>
           </tr>
         </thead>
         <tbody>
           {users.map((u, i) => (
             <tr key={u.id}>
               <td>{i + 1}</td>
-              <td>{u.first}</td>
-              <td>{u.last}</td>
-              <td>{u.email}</td>
+              <td>{u.name}</td>
+              <td>{u.category}</td>
+              <td>{u.tel_num}</td>
               <td>
                 <Link to={`/view/${u.id}`} className="btn btn-primary btn-sm me-1">View</Link>
                 <Link to={`/edit/${u.id}`} className="btn btn-outline-primary btn-sm me-1">Edit</Link>
@@ -28,7 +28,7 @@ export default function UserList({ users, setUsers }) {
             </tr>
           ))}
           {users.length === 0 && (
-            <tr><td colSpan="5">No Users</td></tr>
+            <tr><td colSpan="5">No Products</td></tr>
           )}
         </tbody>
       </table>
